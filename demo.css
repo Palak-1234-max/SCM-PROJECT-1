@@ -1,0 +1,101 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(243, 248, 243);
+    height: 1.5;
+    width: 100%;
+}
+.container{
+    padding: 0 15px;
+    width: 100%;
+    margin-bottom: 40px; 
+    align-items: center;
+    text-align: center;
+}
+.container .filter-item{
+   color: rgb(14, 111, 9);
+   font-family: 'Poppins', sans-serif;
+   font-size: 17px;
+   border: 2px solid white;
+   display: inline-block;
+   border-radius: 20px;
+   margin-right: 8px;
+   cursor: pointer;
+   padding: 8px 20px 8px 20px;
+   line-height: 1.2;
+   transition: all 0.3s ease;
+}
+.container .filter-item.active{
+    color:white ;
+    border-color: #00cc90;
+    background: #00cc90;
+    margin-top: 20px;
+}
+.container .filter-item.active:hover{
+    background-color: #00dd90;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;   
+    flex-wrap: wrap;
+    margin-top: 30px;
+    background-color: #f2f8f6;
+}
+.store-items{
+    width: 300px;
+    padding: 1rem;
+}
+.store-items img{
+    width: 100%;
+    display:block;    
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.2); 
+    padding: 20px;
+}
+.store-items img:hover{
+    transform: scale(1.05);
+}
+li:hover{
+    text-decoration: underline solid;
+    color: white;
+}
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+footer p {
+    margin: 10px 0;
+}
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
+@media (min-width:400px) and (max-width:800px)  {
+    .box{
+        display: grid;
+    }
+}

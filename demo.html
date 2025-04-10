@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link rel="stylesheet" href="demo.css">
+    <style>
+        .container {
+            margin: 20px;
+        }
+        .filter-item {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .filter-item.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .filter-item:hover {
+            background-color: #45a049;
+        }
+        .store-items {
+            display: inline-block;
+            margin: 30px;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .modal-button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .modal-button:hover {
+            background-color: #45a049;
+        }
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="filter-item active" data-filter="all">All</button>
+        <button class="filter-item" data-filter="nature">Nature</button>
+        <button class="filter-item" data-filter="travelling">Travelling</button>
+        <button class="filter-item" data-filter="clothes">Clothes</button>
+        <button class="filter-item" data-filter="technology">Technology</button>
+    </div>
+
+    <div class="box" id="store items" >
+        <!--Ist items-->
+        <div class="store-items nature">
+            <div class="store img">
+        <img src="https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_640.jpg" alt="Free Avenue Trees photo and picture" height="300" width="300">
+             </div>
+           
+        </div>
+        <div class="store-items nature">
+            <div class="store img">
+        <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg" alt="Free Road Forest photo and picture"  height="300" width="300">
+            </div>   
+        </div>
+        <div class="store-items nature">
+            <div class="store img">
+        <img src="https://cdn.pixabay.com/photo/2024/02/09/13/03/beach-8563083_640.jpg" alt="Free Beach Waves photo and picture"  height="300" width="300">
+            </div>   
+        </div>
+        <div class="store-items nature">
+            <div class="store img">
+         <img src="https://cdn.pixabay.com/photo/2023/02/01/10/37/sunset-7760143_640.jpg" alt="Free Sunset Sky photo and picture"  height="300" width="300">
+            </div>   
+        </div>
+          <div class="store-items nature">
+        <div class="store img">
+          <img src="https://cdn.pixabay.com/photo/2024/06/20/17/03/fishing-8842590_640.jpg"alt="Free Fishing Fisherman illustration and picture"  height="300" width="300">
+         </div>   
+        </div>
+        <div class="store-items nature">
+          <div class="store img">
+        <img src="https://cdn.pixabay.com/photo/2023/07/01/18/21/water-8100724_640.jpg" alt="Free Water Lake photo and picture"  height="300" width="300">
+          </div>   
+        </div>
+        <!--2nd items-->
+        <div class="store-items travelling">
+            <div class="store img">
+                <img src="https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500alt=" alt= "Man Standing on a Rock Stock Photo" height="300" width="300">
+            </div>
+        </div>
+        <div class="store-items travelling">
+            <div class="store img">
+                <img  height="300" width="300" src="https://media.istockphoto.com/id/1368992726/photo/happy-girl-celebrating-success-at-sunset-the-girl-is-wearing-a-hat-and-her-arms-are.jpg?s=612x612&w=0&k=20&c=e3fSS91OsEi4y5oeoU8-BumeUn18To7Pbf_urSPXSik=" alt="Happy girl celebrating success at sunset. The girl is wearing a hat and her arms are outstretched. Happy girl celebrating success at sunset. The girl is wearing a hat and her arms are outstretched. people travelling stock pictures, royalty-free photos & images">
+            </div>
+        </div>
+        <div class="store-items travelling">
+            <div class="store img">
+                <img  height="300" width="300" src="https://media.istockphoto.com/id/1096035138/photo/beautiful-young-couple-relaxing-after-hiking-and-taking-a-break.jpg?s=612x612&w=0&k=20&c=iwNan7K7gbiIl2unv-9EuE5Yej-h_l1OrLNMel0husU=" alt="beautiful young couple relaxing after hiking and taking a break young couple of hikers enjoying the beautiful nature from high above people travelling stock pictures, royalty-free photos & images">
+            </div>
+        </div>  
+        <div class="store-items travelling">
+            <div class="store img">
+                <img  height="300" width="300" src="https://media.istockphoto.com/id/904172104/photo/weve-made-it-all-this-way-i-am-proud.jpg?s=612x612&w=0&k=20&c=MewnsAhbeGRcMBN9_ZKhThmqPK6c8nCT8XYk5ZM_hdg=" alt="We've made it all this way, I am proud Shot of a young couple hiking through the mountains people travelling stock pictures, royalty-free photos & images">
+            </div>
+        </div>
+        <div class="store-items travelling">
+            <div class="store img">
+                <img  height="300" width="300" src="https://media.istockphoto.com/id/1141196125/photo/hiking-in-the-allgaeu-alps.jpg?s=612x612&w=0&k=20&c=scBnm6PxD4eJm49IKmP-EJiarbI_lds_z5QCWgViqTo=" alt="Hiking in the Allgaeu Alps nice senior woman, hiking in fall, autumn  on the ridge of the Nagelfluh chain near Oberstaufen, Allgaeu Area, Bavaria, Germany, Hochgrats summit in the background people travelling stock pictures, royalty-free photos & images">
+            </div>
+        </div> 
+        <div class="store-items travelling">
+             <div class="store img">
+                <img  height="300" width="300" src="https://media.istockphoto.com/id/1344837084/photo/young-woman-with-backpack-outdoors.jpg?s=612x612&w=0&k=20&c=f9Po3asqsJ4CFSdaxjF9bSIDhPiYtbBZx7H8bCdKyxw=" alt="Young Woman with Backpack Outdoors Back view portrait of young African-American woman with backpack enjoying hiking in forest lit by sunlight, copy space people travelling stock pictures, royalty-free photos & images">
+             </div>   
+        </div>
+        <!--3rd items-->
+        <div class="store-items clothes">
+            <div class="store img">
+                <img  height="300" width="400" src="data:image/jpeg;base64,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" alt="19,459,561 Clothes Royalty-Free Photos and Stock Images ...">
+            </div>
+        </div>
+        <div class="store-items clothes">
+            <div class="store img">
+                <img  height="300" width="400" src="https://images.unsplash.com/photo-1509319117193-57bab727e09d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2xvdGhpbmd8ZW58MHx8MHx8fDA%3D"  alt="clothes hanging on white rack">
+            </div>
+        </div>
+     <div class="store-items clothes">
+        <div class="store img">
+     <img  height="300" width="400" src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNsb3RoZXN8ZW58MHx8MHx8fDA%3D" alt="Best 500+ Clothes Pictures">
+        </div>
+     </div>
+     <div class="store-items clothes">
+        <div class="store img">
+            <img  height="300" width="400" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSR3NjtRIT4mLQOXS3eqc85DRFsOQRDRzeHwR8bvhFoyWfyHTG0Bq4IaO3vQGR72GLToyGkNBU21l5fuU4KqSUrgdt7KRVGKq_mqtmRh2zc" >
+        </div>
+     </div>
+     <div class="store-items clothes">
+        <div class="store img">
+          <img  height="300" width="400" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRekRmWbTpmhzikC-jdzw3qfuWEHvgWpfX_zg&s"alt="19,465,839 Clothes Royalty-Free Photos ...">
+        </div>
+     </div>
+     <div class="store-items clothes">
+        <div class="store img">
+            <img  height="300" width="400" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8qcK5S6qFAYjn9b4Da0z8jBcXNRKHMirKIg&s" alt="Clothing Department – Burford Garden ...">
+        </div>
+     </div>
+     <div class="store-items clothes">
+        <div class="store img">
+            <img  height="300" width="400" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb8SN50YfgMgkhdPK8n_CjAoli5Y2LpCb3AQ&s" alt="What Is Fast Fashion—and Why Is It a ...">
+        </div>
+     </div>
+     <!--4th items-->
+     <div class="store-items technology">
+        <div class="store img">
+            <img  height="300" width="400" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Free Close Up Photo of Programming of Codes Stock Photo">
+        </div>
+     </div>
+     <div class="store-items technology">
+        <div class="store img">
+            <img  height="300" width="400" src="https://images.pexels.com/photos/6153738/pexels-photo-6153738.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=170.625&fit=crop&h=276.25">
+        </div>
+     </div>
+     <div class="store-items technology">
+        <div class="store img">
+            <img  height="300" width="400" src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Free Code Projected Over Woman Stock Photo">
+        </div>
+     </div>
+     <div class="store-items technology">
+        <div class="store img">
+            <img  height="300" width="400" src="https://images.pexels.com/photos/343457/pexels-photo-343457.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Free Green Circuit Board Stock Photo">
+        </div>
+     </div>
+     <div class="store-items technology">
+        <div class="store img">
+            <img  height="300" width="400" src="https://images.pexels.com/photos/1105379/pexels-photo-1105379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Free Photo of Green Circuit Board Stock Photo">
+        </div>
+    
+     </div>
+
+     <!-- Modal for sharing and downloading options -->
+<div id="actionModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Choose an action</h2>
+        <button id="downloadBtn" class="modal-button">Download</button>
+        <button id="shareBtn" class="modal-button">Share</button>
+    </div>
+</div>
+
+
+    <script>
+        // Get all the buttons with class filter-item
+    const filterButtons = document.querySelectorAll('.filter-item');
+    const items = document.querySelectorAll('.store-items');
+    
+    // Loop through each button
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove 'active' class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add 'active' class to the clicked button
+            button.classList.add('active');
+            
+            // Get the filter type from the button's data-filter attribute
+            const filterValue = button.getAttribute('data-filter');
+
+            // Loop through all the items and show or hide based on the filter value
+            items.forEach(item => {
+                if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                    item.style.display = 'inline-block';  // Show the item
+                } else {
+                    item.style.display = 'none';  // Hide the item
+                }
+            });
+        });
+    });
+    </script>
+
+</body>
+</html>

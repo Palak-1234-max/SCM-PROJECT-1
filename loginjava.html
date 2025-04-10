@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script>
+        // JavaScript function to validate the form
+        function validateForm(event) {
+            // Prevent default form submission
+            event.preventDefault();
+
+            // Get email and password values
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // Basic validation
+            if (!email || !password) {
+                alert("Please fill in both email and password.");
+                return;
+            }
+
+            // Further validation (example: check for valid email format)
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            // If everything is valid, show a success message
+            alert("Login successful!");
+
+            // Redirect to the homepage (adjust the URL as needed)
+            window.location.href = "index.html";  // Change this URL to your actual homepage
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form onsubmit="validateForm(event)">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+    </div>
+</body>
+</html>
